@@ -1,0 +1,164 @@
+.sortin-app-banner {
+  position: fixed;
+  z-index: 100;
+  inset-inline: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: black;
+  color: red;
+  height: fit-content;
+  padding: 10px;
+  cursor: pointer;
+}
+.sortin-app-banner * {
+  margin: 0;
+}
+.sortin-app-banner-fab {
+  position: fixed;
+  z-index: 100;
+  left: 1rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.sortin-app-banner-fab * {
+  margin: 0;
+}
+.sortin-app-banner-coin-cont {
+  position: relative;
+  display: flex;
+  width: 60px;
+  height: 40px;
+  vertical-align: middle;
+}
+.sortin-app-banner-coin-cont .sortin-app-banner-coin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  filter: drop-shadow(-10px 0px 5px rgba(var(--backgroud-rgb), 0.35));
+}
+.sortin-app-banner-coin-cont .sortin-app-banner-earth {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sortin-app-banner p {
+  font-size: 20px;
+  color: blue
+}
+.sortin-app-banner p span {
+  text-decoration: underline;
+  color: blue
+}
+.sortin-app-banner:hover .sortin-app-banner-arrow {
+  animation: sortinSlideInLeft 500ms;
+}
+
+@media (max-width: 380px) {
+  .sortin-app-banner p {
+    font-size: 12px;
+    line-height: 1;
+  }
+  .sortin-app-banner .sortin-app-banner-coin-cont {
+    display: flex;
+    width: 40px;
+    height: 30px;
+  }
+  .sortin-app-banner .sortin-app-banner-coin {
+    width: 30px;
+    height: 30px;
+  }
+  .sortin-app-banner .sortin-app-banner-earth {
+    width: 30px;
+    height: 30px;
+  }
+  .sortin-app-banner .sortin-app-banner-arrow {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sortin-app-banner {
+    gap: 4px;
+  }
+  .sortin-app-banner p {
+    font-size: 14px;
+    line-height: 1;
+  }
+}
+
+/* sortin fab button */
+.sortin-app-banner-fab-text {
+  background: var(--primary);
+  background: linear-gradient(
+    to right bottom,
+    var(--primary-light) 0%,
+    white 60%,
+    white 100%
+  );
+  width: 250px;
+  padding-left: 24px;
+  transform: translateX(-20px);
+  z-index: 10;
+  padding-block: 10px;
+  box-shadow: 10px 5px 5px rgba(var(--backgroud-rgb), 0.4);
+  border-radius: 8px;
+}
+
+.sortin-app-banner-fab-text p {
+  font-size: 16px;
+  line-height: 1;
+}
+.sortin-app-banner-fab-text p span {
+  text-decoration: underline;
+}
+.sortin-app-banner-fab-coin-cont {
+  position: relative;
+  display: flex;
+  width: 90px;
+  height: 60px;
+  vertical-align: middle;
+  z-index: 20;
+}
+
+.sortin-app-banner-fab .sortin-app-banner-coin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  filter: drop-shadow(-10px 0px 5px rgba(var(--backgroud-rgb), 0.25));
+}
+.sortin-app-banner-fab .sortin-app-banner-earth {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 340px) {
+  .sortin-app-banner-fab {
+    left: 0.5rem;
+    bottom: 0.5rem;
+  }
+  .sortin-app-banner-fab-text {
+    padding-block: 4px;
+  }
+  .sortin-app-banner-fab-coin-cont {
+    width: 60px;
+    height: 40px;
+  }
+  .sortin-app-banner-fab .sortin-app-banner-coin {
+    width: 40px;
+    height: 40px;
+  }
+  .sortin-app-banner-fab .sortin-app-banner-earth {
+    width: 40px;
+    height: 40px;
+  }
+}
