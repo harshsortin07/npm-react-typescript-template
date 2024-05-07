@@ -1,7 +1,8 @@
 import sass from 'rollup-plugin-sass'
 import typescript from 'rollup-plugin-typescript2'
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
-import pkg from './package.json'
+import pkg from './package.json' with {type:"json"}
 
 export default {
   input: 'src/index.tsx',
@@ -15,5 +16,5 @@ export default {
     }
   ],
   plugins: [sass({ insert: true }), typescript()],
-  external: ['react', 'react-dom']
+  external: ['react', 'react-dom', 'fs', nodeResolve()]
 }
