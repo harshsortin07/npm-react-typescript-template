@@ -1,5 +1,7 @@
 # npm-react-typescript-template
 
+# This is really OLD so please stop using this.
+
 A template for publishing a React + TypeScript package to npm
 
 ## How to use
